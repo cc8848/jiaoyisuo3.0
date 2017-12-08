@@ -1,0 +1,245 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	border: 0;
+	font-style: normal;
+	font-family: tahoma, Microsoft YaHei, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+html,
+body {
+	width: auto;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+}
+
+html {
+	height: 100%;
+}
+
+div,
+input,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+i {
+	font-size: 12px;
+	color: rgb(206, 175, 123);
+	text-decoration: none;
+}
+
+#login_wrap {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.login_bgColor {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgb(0, 0, 0);
+	z-index: 9;
+}
+
+.login_box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -40%);
+	font-size: 12px;
+	z-index: 11;
+	background-color:rgba(0,0,0,0.5) ;
+	padding:20px;
+}
+
+.login_title {
+	text-align: center;
+	font-size: 14px;
+}
+
+.login_title legend {
+	border: 0;
+	color: rgb(206, 175, 123);
+}
+
+.login_box_1 {
+	text-align: center;
+}
+
+.help-block {
+	color: rgb(206, 175, 123);
+}
+
+.login_input {
+	line-height: 40px;
+}
+
+#login_wrap .controls {
+	text-align: center;
+	height:50px;
+}
+
+#login_wrap .controls .login_yan {
+	padding: 0;
+	height: 40px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#login_wrap .controls .login_yan img {
+	width: 100%;
+	height: 100%;
+}
+
+#login_wrap .controls input {
+	border-radius: 5px;
+	float: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+
+#login_wrap .controls input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+#login_wrap .controls p {
+	text-align: left;
+	text-indent: 20px;
+	line-height: 20px;
+	display: none;
+}
+
+#login_wrap .controls button {
+	background-color: rgb(206, 175, 123);
+	color: #fff;
+	height: 40px;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.login_back {
+	width:630px;
+	height:630px;
+	background-color: rgb(0, 0, 0);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.login_back img {
+	width: 100%;
+	height: 100%;
+}
+
+.login_logo {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	z-index:15;
+}
+
+.login_logo img {
+	width: 100%;
+	height: 100%;
+}
+.lang_ZhEn{
+		display:inline-block;
+		position: absolute;
+		right:20px;
+		top:10px;
+		color:#ceaf7b;
+		font-size: 14px;
+		vertical-align: top;
+		z-index:11;
+}
+	.lang_ZhEn select{
+		border:0;
+		width:80px;
+		height:20px;
+		font-size:14px;
+		background-color:rgba(0,0,0,0.5);
+		color:#ceaf7b;
+}
+.login-footer{
+	float:right;
+	text-align: right;
+	font-size:12px;
+}
+.login-footer a:hover{
+	color:#ceaf7b;
+	text-decoration:none;
+}
+/*modal*/
+.modal-header{
+	border-bottom: 0;
+	color:#222;
+	font-size:12px;
+}
+.modal-header h4{
+	font-size:18px;
+	color:#222;
+	font-weight:500;
+}
+.modal-dialog{
+	margin:0 auto;
+	width:300px;
+}
+.modal-footer{
+	border:0;
+	color:#222;
+	font-size:12px;
+}
+.modal-footer button{
+	border:0;
+}
+.modal-body{
+	text-align: center;
+	color:#888;
+	font-size:14px;
+}
+/*手机 最大为768*/
+
+@media (max-width:768px) {
+	.login_logo {
+		position: absolute;
+		left: 50%;
+		top: -26%;
+		transform: translateX(-50%);
+	}
+	.login_logo img {
+		width: 100%;
+		height: 100%;
+	}
+	canvas{
+		display:none;
+	}
+	.login_back {
+		width:100%;
+		height:auto;
+		display: block;
+		padding:0 15px;
+		background-color: rgb(0, 0, 0);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+}
+}

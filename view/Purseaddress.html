@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>委托管理</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/Home.css" />
+		<link rel="stylesheet" href="../css/headert.css" />
+		<link rel="stylesheet" href="../img/font/iconfont.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookies.2.2.0.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 header_left col-lg-offset-2 col-md-offset-1">
+				<img src="../img/logoTwo.png" />
+			</div>
+			<div class="col-lg-4 col-md-5 col-sm-6 header_right col-lg-offset-3 col-md-offset-2 col-sm-offset-4">
+				<ul class="PC_header">
+					<li class="">
+						<a href="">首页</a>
+					</li>
+					<li class="">
+						<a href="">交易中心</a>
+					</li>
+					<li class="">
+						<a href="">财务中心</a>
+					</li>
+					<li class="">
+						<a href="">安全中心</a>
+					</li>
+					<li class="">
+						<a href="">新闻公告</a>
+					</li>
+					<li class="">
+						<a href="">账户名称</a>
+					</li>
+					<li class="">
+						<a href="">退出</a>
+					</li>
+				</ul>
+				<div class="IP_header iconfont icon-caidan"></div>
+			</div>
+		</div>
+		<div class="Fin_banner">
+			<img src="../img/banner.jpg" class="finBanner" />
+			<div class="Fin_User col-lg-4 col-md-5 col-sm-6 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+				<h1>账户名称</h1>
+				<span>UID:124555</span>
+				<span>上次登录时间:2011/02/12</span>
+			</div>
+		</div>
+		<div class="Entrus_body">
+			<div class="nav_left col-lg-1 col-md-2 col-sm-3 col-lg-offset-2 col-md-offset-1">
+				<ul>
+					<li>
+						<a>修改登录密码</a>
+					</li>
+					<li>
+						<a>修改交易密码</a>
+					</li>
+					<li>
+						<a>银行卡管理</a>
+					</li>
+					<li>
+						<a class="active">钱包地址管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="Fin_Cont col-lg-7 col-md-7 col-sm-7 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
+				<div class="table-responsive">
+					<h1 class="tab_title PurseaTab_title">充值记录</h1>
+					<a href="" class="PurseaTab_add">新建地址</a>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>币种</th>
+								<th>买入</th>
+								<th>卖出</th>
+								<th>成交时间</th>
+								<th>成交价格</th>
+								<th>成交数量</th>
+								<th>总金额</th>
+								<th>手续费</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>人人币(RRC)</td>
+								<td>0.424</td>
+								<td>1023122</td>
+								<td>2017/02/05</td>
+								<td>112355</td>
+								<td>112355</td>
+								<td>45515(￥)</td>
+								<td>45515(￥)</td>
+								<td>
+									<a href="">撤销</a>
+								</td>
+							</tr>
+							<tr>
+								<td>人人币(RRC)</td>
+								<td>0.424</td>
+								<td>1023122</td>
+								<td>222121</td>
+								<td>112355</td>
+								<td>112355</td>
+								<td>45515(￥)</td>
+								<td>45515(￥)</td>
+								<td>
+									<a href="">撤销</a>
+								</td>
+							</tr>
+							<tr>
+								<td>人人币(RRC)</td>
+								<td>0.424</td>
+								<td>1023122</td>
+								<td>222121</td>
+								<td>112355</td>
+								<td>112355</td>
+								<td>45515(￥)</td>
+								<td>45515(￥)</td>
+								<td>
+									<a href="">撤销</a>
+								</td>
+							</tr>
+							<tr>
+								<td>人人币(RRC)</td>
+								<td>0.424</td>
+								<td>1023122</td>
+								<td>222121</td>
+								<td>112355</td>
+								<td>112355</td>
+								<td>45515(￥)</td>
+								<td>45515(￥)</td>
+								<td>
+									<a href="">撤销</a>
+								</td>
+							</tr>
+							<tr>
+								<td>人人币(RRC)</td>
+								<td>0.424</td>
+								<td>1023122</td>
+								<td>222121</td>
+								<td>112355</td>
+								<td>112355</td>
+								<td>45515(￥)</td>
+								<td>45515(￥)</td>
+								<td>
+									<a href="">撤销</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="footer" style="padding: 0px;">
+			<div class="contact_us">
+				<div class="contact_us_text0" style="text-align: center;font-size:13px">
+					<label>{$Think.lang.客服}:</label>
+					<p><span>{$Think.lang.微信1}：</span>17135511224</p>
+					<p><span>{$Think.lang.微信2}：</span>17135511184</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+	</script>
+
+</html>

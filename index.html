@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.cookies.2.2.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/canvas-particle.js"></script>
+	</head>
+	<body>
+		<div class="login_bgColor"></div>
+		<div class="container" id="login_wrap">
+			<div class="login_back col-lg-4 col-md-8 col-sm-8 col-xs-12">
+				<img src="img/2.png" />
+				<div class="login_logo col-lg-3 col-md-3 col-sm-3 col-xs-4">
+					<img src="img/logo.png" />
+				</div>
+			</div>
+			<div class="lang_ZhEn" id="lang_ZhEn">
+				<label>语言：</label>
+				<select>
+					<option value="zh-cn">中文</option>
+					<option value="en-us">English</option>
+				</select>
+			</div>
+			<div class="col-lg-2 login_box col-md-4 col-sm-4 col-xs-10">
+				<fieldset>
+					<div id="legend" class="login_title">
+						<legend class="">登录</legend>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<input type="text" placeholder="请输入账号" class="col-lg-12 col-xs-12 input-xlarge login_input login_user">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<input type="password" placeholder="请输入密码" class="col-lg-12 col-xs-12 input-xlarge login_input login_pass">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<input type="password" placeholder="验证码" class="col-lg-8 col-xs-8 input-xlarge login_input login_Code" style="float:left;">
+							<div class="login_yan col-lg-4 col-xs-4">
+								<img src="img/bg1.jpg" />
+							</div>
+							<p class="help-block">验证码!</p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<button class="btn col-lg-12 col-xs-12" onclick="BtnLogin()">登录</button>
+						</div>
+					</div>
+					<div class="login-footer" style="background:rgba(0,0,0,.9)">
+						<!--<a href="/"> <img src="__PUBLIC__/Home/images/qq2.png">QQ登录</a> -->
+						<span> <a href="view/addBank.html">{$Think.lang.免费注册}</a> ｜ <a href="{:U('Login/findpwd')}">{$Think.lang.忘记密码}</a>
+     						 </span>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!--  modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel"></h4>
+					</div>
+					<div class="modal-body">在这里添加一些文本</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal -->
+		</div>
+	</body>
+	<script src="js/home.js">
+	</script>
+	<script>
+		window.onload = function() {
+			/*canvas背景效果*/
+
+			var config = {
+				vx: 4, //小球x轴速度,正为右，负为左
+				vy: 4, //小球y轴速度
+				height: 2, //小球高宽，其实为正方形，所以不宜太大
+				width: 2,
+				count: 300, //点个数
+				color: "206, 175, 123", //点颜色
+				stroke: "206, 175, 123", //线条颜色
+				dist: 6000, //点吸附距离
+				e_dist: 20000, //鼠标吸附加速距离
+				max_conn: 10, //点到点最大连接数
+				myId: "login_wrap" //  div 的id
+			}
+
+			//调用
+			CanvasParticle(config);
+
+			/*canvas背景效果  end*/
+		}
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+
+	</script>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/Home.css" />
+		<link rel="stylesheet" href="../css/headert.css" />
+		<link rel="stylesheet" href="../img/font/iconfont.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 header_left col-lg-offset-2 col-md-offset-1">
+				<img src="../img/logoTwo.png" />
+			</div>
+			<div class="col-lg-4 col-md-5 col-sm-6 header_right col-lg-offset-3 col-md-offset-2 col-sm-offset-4">
+				<ul class="PC_header">
+					<li class="">
+						<a href="">首页</a>
+					</li>
+					<li class="">
+						<a href="">交易中心</a>
+					</li>
+					<li class="">
+						<a href="">财务中心</a>
+					</li>
+					<li class="">
+						<a href="">安全中心</a>
+					</li>
+					<li class="">
+						<a href="">新闻公告</a>
+					</li>
+					<li class="">
+						<a href="">账户名称</a>
+					</li>
+					<li class="">
+						<a href="">退出</a>
+					</li>
+				</ul>
+				<div class="IP_header iconfont icon-caidan"></div>
+			</div>
+		</div>
+		<div class="Home2Body">
+			<div class="Home_banner">
+				<img src="../img/banner.jpg" class="banner_img" />
+				<div id="login-bar" class="login_box_2 col-lg-2 col-md-3 col-sm-4 header_right col-lg-offset-8 col-md-offset-7 col-sm-offset-8">
+					<dl>
+						<dd class="Home_user">
+							账户：
+							<a href="" class="Home_user-email">ceshi007</a>
+						</dd>
+						<dd style="line-height: 16px;height: 20px;color: #CCCCCC;">
+							ID：
+							<span class="Home_user-id" style="color: #CCCCCC;">85666</span>
+						</dd>
+						<dd style="height: 50px;font-size: 18px;">总资产</dd>
+						<dd style="border-bottom: 1px solid #fff;padding-bottom: 5px;">
+							<span class="Home_user-finance" id="Home_user_finance" style="font-size:20px">loading...</span>
+						</dd>
+					</dl>
+					<div class="Home_login_box_2_btn">
+						<a href="">充值</a>
+						<a href="">提现</a>
+						<a href="" class="Home_w82">委托管理</a>
+					</div>
+					<div class="Home_gotocenter">
+						<a href="" class="Home_center">资产总览</a>
+					</div>
+					<div class="Home_service_qq"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+	</script>
+
+</html>

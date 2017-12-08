@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>银行卡管理</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/Home.css" />
+		<link rel="stylesheet" href="../css/headert.css" />
+		<link rel="stylesheet" href="../img/font/iconfont.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookies.2.2.0.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+		<script src="../js/iscroll.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 header_left col-lg-offset-2 col-md-offset-1">
+				<img src="../img/logoTwo.png" />
+			</div>
+			<div class="col-lg-5 col-md-6 col-sm-8 header_right col-lg-offset-2 col-md-offset-1 col-sm-offset-2">
+				<ul class="PC_header">
+					<li class="">
+						<a href="">首页</a>
+					</li>
+					<li class="">
+						<a href="">交易中心</a>
+					</li>
+					<li class="">
+						<a href="">财务中心</a>
+					</li>
+					<li class="">
+						<a href="">安全中心</a>
+					</li>
+					<li class="">
+						<a href="">新闻公告</a>
+					</li>
+					<li class="">
+						<a href="">账户名称</a>
+					</li>
+					<li class="">
+						<a href="">退出</a>
+					</li>
+				</ul>
+				<div class="IP_header iconfont icon-caidan"></div>
+				<div class="Header_sele">
+					<label>语言：</label>
+					<select>
+						<option>中文</option>
+						<option>英文</option>
+					</select>
+				</div>
+			</div>
+			<div class="">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="Fin_banner">
+			<img src="../img/banner.jpg" class="finBanner" />
+			<div class="Fin_User col-lg-4 col-md-5 col-sm-6 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+				<h1>账户名称</h1>
+				<span>UID:124555</span>
+				<span>上次登录时间:2011/02/12</span>
+			</div>
+		</div>
+		<div class="rech_body">
+			<div id="wrapper" class="nav_left col-lg-1 col-md-2 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1">
+				<div id="scroller">
+					<ul class="content">
+						<li>
+							<a>修改登录密码</a>
+						</li>
+						<li>
+							<a>修改交易密码</a>
+						</li>
+						<li>
+							<a class="active">银行卡管理</a>
+						</li>
+						<li>
+							<a>钱包地址管理</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="Fin_Cont col-lg-7 col-md-7 col-sm-7 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
+
+				<div class="CharMoney_form">
+					<form class="form-horizontal">
+						<fieldset>
+							<div id="legend" class="">
+								<legend class="CharMoney_legend">添加银行卡</legend>
+							</div>
+							<div class="control-group">
+								<!-- Text input-->
+								<label class="control-label" for="input01">真实姓名：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<input type="text" placeholder="" class="input-xlarge col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<p class="help-block">真实姓名</p>
+								</div>
+							</div>
+
+							<div class="control-group">
+
+								<!-- Text input-->
+								<label class="control-label" for="input01">选择银行：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<input type="text" placeholder="placeholder" class="input-xlarge col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<p class="help-block">选择银行</p>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<!-- Appended input-->
+								<label class="control-label">开户省：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<div class="input-append">
+										<input class="span2 col-lg-7 col-md-7 col-sm-7 col-xs-12" placeholder="placeholder" type="text">
+									</div>
+									<p class="help-block">开户省</p>
+								</div>
+
+							</div>
+
+							<div class="control-group">
+								<!-- Appended input-->
+								<label class="control-label">开户市：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<div class="input-append">
+										<input class="span2 col-lg-7 col-md-7 col-sm-7 col-xs-12" placeholder="placeholder" type="text">
+									</div>
+									<p class="help-block">开户市</p>
+								</div>
+
+							</div>
+
+							<div class="control-group">
+								<!-- Appended input-->
+								<label class="control-label">开户支行：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<div class="input-append">
+										<input class="span2 col-lg-7 col-md-7 col-sm-7 col-xs-12" placeholder="placeholder" type="text">
+									</div>
+									<p class="help-block">开户支行</p>
+								</div>
+
+							</div>
+							<div class="control-group">
+
+								<!-- Text input-->
+								<label class="control-label" for="input01">银行卡号：</label>
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<input type="password" placeholder="placeholder" class="input-xlarge col-lg-7 col-md-7 col-sm-7 col-xs-12">
+									<p class="help-block">银行卡号</p>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label"></label>
+
+								<!-- Button -->
+								<div class="controls col-lg-7 col-md-7 col-sm-7 col-xs-12 btnSuccess">
+									<button class="btn">添加银行卡</button>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+
+				</div>
+				<div class="add_bank">
+					<h1>我的银行卡</h1>
+					<ul class="col-lg-3 col-md-5 col-sm-6 col-xs-12">
+						<li>
+							<h3 class="bank_title">中国工商银行</h3> <span class="bank_titleRight">删除</span></li>
+						<li><label>卡号：</label><i>6212 **** **** 6005 </i></li>
+						<li><label>户名：</label><i>查查查</i></li>
+						<li><label>城市：</label><i>河北 唐山 河北 唐山 河北 唐山 河北 唐山</i></li>
+						<li><label>支行：</label><i>瑞士银行唐山支行</i></li>
+						<li class="add_bankBtn"><button>立刻充值</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer" style="padding: 0px;">
+			<div class="contact_us">
+				<div class="contact_us_text0" style="text-align: center;font-size:13px">
+					<label>Customer service:</label>
+					<span><i>watch One：</i>17135511224</span>
+					<span><i>watch Two：</i>17135511184</span>
+				</div>
+				<div class="contact_us_text1">
+					<p><i class="iconfont icon-weixin"></i><span>17135511224</span>/<span>17135511184</span></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var myScroll;
+		function loaded() {
+			myScroll = new IScroll('#wrapper', {
+				eventPassthrough: true,
+				scrollX: true,
+				scrollY: false,
+				preventDefault: false
+			});
+		}
+		loaded();
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+	</script>
+
+</html>

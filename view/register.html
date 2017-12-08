@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookies.2.2.0.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</head>
+
+	<body>
+		<div class="login_bgColor"></div>
+		<div class="container" id="login_wrap">
+			<div class="login_back col-lg-4 col-md-8 col-sm-8 col-xs-12">
+				<img src="../img/2.png" />
+				<div class="login_logo col-lg-3 col-md-3 col-sm-3 col-xs-4">
+					<img src="../img/logo.png" />
+				</div>
+			</div>
+			<div class="col-lg-2 login_box col-md-4 col-sm-4 col-xs-10">
+				<form class="form-horizontal">
+					<fieldset>
+						<div id="legend" class="login_title">
+							<legend class="">注册</legend>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<input type="text" placeholder="请输入账号" class="col-lg-12 col-xs-12 input-xlarge login_input">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<input type="text" placeholder="请输入您的邮箱账号" class="col-lg-12 col-xs-12 input-xlarge login_input">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<input type="password" placeholder="验证码" class="col-lg-8 col-xs-8 input-xlarge login_input" style="float:left;">
+								<div class="login_yan col-lg-4 col-xs-4">
+									<img src="../img/bg1.jpg"/>
+								</div>
+								<p class="help-block">验证码!</p>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<input type="password" placeholder="请输入密码" class="col-lg-12 col-xs-12 input-xlarge login_input">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<input type="password" placeholder="请重复输入密码" class="col-lg-12 col-xs-12 input-xlarge login_input">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<button class="btn col-lg-12 col-xs-12">注册</button>
+							</div>
+						</div>
+						<div class="login-footer" style="background:rgba(0,0,0,.9)">
+							<!--<a href="/"> <img src="__PUBLIC__/Home/images/qq2.png">QQ登录</a> -->
+							<span> <a href="{:U('Login/register')}">{$Think.lang.去登陆}</a> ｜ <a href="{:U('Login/findpwd')}">{$Think.lang.忘记密码}</a>
+     						 </span>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = function() {
+			/*canvas背景效果*/
+
+			var config = {
+				vx: 4, //小球x轴速度,正为右，负为左
+				vy: 4, //小球y轴速度
+				height: 2, //小球高宽，其实为正方形，所以不宜太大
+				width: 2,
+				count: 300, //点个数
+				color: "206, 175, 123", //点颜色
+				stroke: "206, 175, 123", //线条颜色
+				dist: 6000, //点吸附距离
+				e_dist: 20000, //鼠标吸附加速距离
+				max_conn: 10, //点到点最大连接数
+				myId: "login_wrap" //  div 的id
+			}
+
+			//调用
+			CanvasParticle(config);
+
+			/*canvas背景效果  end*/
+
+		}
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+	</script>
+
+</html>

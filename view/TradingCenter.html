@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>交易中心</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/Home.css" />
+		<link rel="stylesheet" href="../css/headert.css" />
+		<link rel="stylesheet" href="../img/font/iconfont.css" />
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookies.2.2.0.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 header_left col-lg-offset-2 col-md-offset-1">
+				<img src="../img/logoTwo.png" />
+			</div>
+			<div class="col-lg-4 col-md-5 col-sm-6 header_right col-lg-offset-3 col-md-offset-2 col-sm-offset-4">
+				<ul class="PC_header">
+					<li class="">
+						<a href="">首页</a>
+					</li>
+					<li class="">
+						<a href="">交易中心</a>
+					</li>
+					<li class="">
+						<a href="">财务中心</a>
+					</li>
+					<li class="">
+						<a href="">安全中心</a>
+					</li>
+					<li class="">
+						<a href="">新闻公告</a>
+					</li>
+					<li class="">
+						<a href="">账户名称</a>
+					</li>
+					<li class="">
+						<a href="">退出</a>
+					</li>
+				</ul>
+				<div class="IP_header iconfont icon-caidan"></div>
+			</div>
+		</div>
+		<div class="Trading_body col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1">
+			<div class="trading_title">
+				<ul>
+					<li>
+						<a href="" class="active">交易比特币</a>
+					</li>
+					<li>
+						<a href="">比特股官网</a>
+					</li>
+				</ul>
+			</div>
+			<div class="trading_chart col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="trad_char">
+					<div id="paint_chart" style="height: 400px">
+						<iframe style="border-style: none;" border="0" width="100%" height="400" id="market_chart" src="1/ordinary.html"></iframe>
+					</div>
+				</div>
+				<div class="trad_transaction">
+					<div class="trad_tranLeft col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+						<h1>买入</h1>
+						<div class="trad_tranFrom">
+							<form>
+								<div class="trad_Price">
+									<input placeholder="买入价格 CNY/BTS" type="text" />
+									<span>最佳买价<i>0.73</i></span>
+								</div>
+								<div class="trad_number">
+									<input type="text" placeholder="买入价格 CNY/BTS" />
+									<span>最佳买价<i>0.73</i></span>
+								</div>
+								<div class="trad_purchase">
+									<label>买入比例：</label>
+									<div class="slider_wrap">
+										<div id="ratio_num_sell" class="ratio">0%</div>
+										<div class="sliderbox">
+											<div id="slider_sell" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+												<div class="ui-slider-range ui-widget-header ui-slider-range-min"></div>
+												<a data_slide="sell" class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
+												<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="trad_priceNum">
+									<label>交易额：</label><span>0 CNY</span>
+								</div>
+								<div class="trad_priceMon">
+									<label>手续费：</label><span>0.1%</span>
+								</div>
+								<div class="trad_pricePassword">
+									<input type="password" placeholder="请输入交易密码" />
+								</div>
+								<div class="trad_priceBtn">
+									<button>买入</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+					<div class="trad_tranLeft col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+						<h1>卖出</h1>
+						<div class="trad_tranFrom">
+							<form>
+								<div class="trad_Price">
+									<input type="text" placeholder="买入价格 CNY/BTS" />
+									<span>最佳卖价<i>0.73</i></span>
+								</div>
+								<div class="trad_number">
+									<input type="text" placeholder="买入价格 CNY/BTS" />
+									<span>最佳卖价<i>0.73</i></span>
+								</div>
+								<div class="trad_purchase">
+									<label>卖入比例：</label>
+									<div class="slider_wrap">
+										<div id="ratio_num_buy" class="ratio">0%</div>
+										<div class="sliderbox">
+											<div id="slider_buy" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+												<div class="ui-slider-range ui-widget-header ui-slider-range-min"></div>
+												<a data_slide="sell" class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
+												<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="trad_priceNum">
+									<label>交易额：</label><span>0 CNY</span>
+								</div>
+								<div class="trad_priceMon">
+									<label>手续费：</label><span>0.1%</span>
+								</div>
+								<div class="trad_pricePassword">
+									<input type="password" placeholder="请输入交易密码" />
+								</div>
+								<div class="trad_priceBtn">
+									<button class="trad_priceBtnColor">卖出</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="trad_Record">
+					<h1>最近成交记录</h1>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<th>成交时间</th>
+									<th>买/卖</th>
+									<th>成交价</th>
+									<th>成交量</th>
+									<th>总额</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>11-21 15:11:32</td>
+										<td>买</td>
+										<td>63567.494</td>
+										<td>5000</td>
+										<td>0.818</td>
+									</tr>
+									<tr>
+										<td>11-21 15:11:32</td>
+										<td>买</td>
+										<td>63567.494</td>
+										<td>5000</td>
+										<td>0.818</td>
+									</tr>
+									<tr>
+										<td>11-21 15:11:32</td>
+										<td>买</td>
+										<td>63567.494</td>
+										<td>5000</td>
+										<td>0.818</td>
+									</tr>
+									<tr>
+										<td>11-21 15:11:32</td>
+										<td>买</td>
+										<td>63567.494</td>
+										<td>5000</td>
+										<td>0.818</td>
+									</tr>
+									<tr>
+										<td>11-21 15:11:32</td>
+										<td>买</td>
+										<td>63567.494</td>
+										<td>5000</td>
+										<td>0.818</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+				</div>
+			</div>
+			<div class="trad_charTab col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="table-responsive trad_Tab">
+					<table class="table">
+						<thead>
+							<th>买/卖</th>
+							<th>价格</th>
+							<th>数量</th>
+							<th>折合人民币</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>卖1</td>
+								<td>0.75</td>
+								<td>63567.494</td>
+								<td>￥46754.4515</td>
+							</tr>
+							<tr>
+								<td>卖1</td>
+								<td>0.75</td>
+								<td>63567.494</td>
+								<td>￥46754.4515</td>
+							</tr>
+							<tr>
+								<td>卖1</td>
+								<td>0.75</td>
+								<td>63567.494</td>
+								<td>￥46754.4515</td>
+							</tr>
+							<tr>
+								<td>卖1</td>
+								<td>0.75</td>
+								<td>63567.494</td>
+								<td>￥46754.4515</td>
+							</tr>
+							<tr>
+								<td>卖1</td>
+								<td>0.75</td>
+								<td>63567.494</td>
+								<td>￥46754.4515</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="table-responsive trad_MyEntrust">
+					<h1>我的委托</h1>
+					<table class="table">
+						<thead>
+							<th>成交时间</th>
+							<th>买/卖</th>
+							<th>价格</th>
+							<th>数量</th>
+							<th>已成交</th>
+							<th>总额</th>
+							<th>操作</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+							<tr>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td>5</td>
+								<td>144.2542</td>
+								<td>12:12:12:</td>
+								<td>买</td>
+								<td><a href="">撤销</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer" style="padding: 0px;">
+			<div class="contact_us">
+				<div class="contact_us_text0" style="text-align: center;font-size:13px">
+					<label>{$Think.lang.客服}:</label>
+					<p><span>{$Think.lang.微信1}：</span>17135511224</p>
+					<p><span>{$Think.lang.微信2}：</span>17135511184</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		body{
+			background-color:#f8f8f8 ;
+		}
+	</style>
+	<script>
+		/*控制中英文切换*/
+		if($.cookies.get('think_language')) {
+			$("#lang_ZhEn option").each(function() {
+				if($(this).val() === $.cookies.get('think_language')) {
+					$(this).attr('selected', 'selected');
+				}
+			});
+		} else {
+
+		}
+
+		$('#lang_ZhEn').change(function() {
+			$.cookies.set('think_language', $('#lang_ZhEn option:selected').val(), {
+				hoursToLive: 168
+			})
+			location.replace(location.href);
+			//alert($.cookies.get('lang'))
+		})
+		
+		function WebSocketTest(){
+			if('WebSocket' in window){
+				//alert('支持');
+				var ws = new WebSocket("wss://jys.com:2346");//连接
+				ws.onopen = function(){
+					ws.send('发送数据...');
+					console.log("连接成功...")
+				}
+				ws.onmessage = function(ev){
+					console.log(ev.data);
+					console.log(ws.readyState)
+				}
+			}else{
+				alert("不支持")
+			}
+		}
+		WebSocketTest();
+		
+	</script>
+
+</html>
